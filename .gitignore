@@ -1,0 +1,92 @@
+# ================================
+# Virtual Environments
+# ================================
+.venv/
+.venv-1/
+venv/
+env/
+
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ================================
+# Jupyter Notebook
+# ================================
+.ipynb_checkpoints/
+
+# ================================
+# Raw / Generated Data
+# ================================
+data/
+
+# ================================
+# Trained ML Models
+# ================================
+models/*.pkl
+models/*.joblib
+
+# ================================
+# Environment Variables
+# ================================
+.env
+.env.*
+!.env.example
+
+# ================================
+# Credentials / Secrets
+# ================================
+creds
+nyc-mobility-pipeline_accessKeys.csv
+*accessKeys*.csv
+*credentials*.csv
+*secret*
+*password*
+*.pem
+*.key
+.aws/
+
+# ================================
+# dbt
+# ================================
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+nyc_mobility/target/
+nyc_mobility/logs/
+nyc_mobility/dbt_packages/
+
+# dbt credentials
+profiles.yml
+**/profiles.yml
+
+# ================================
+# Airflow
+# ================================
+airflow/logs/
+airflow/airflow.cfg
+airflow/webserver_config.py
+
+# ================================
+# IDE
+# ================================
+.vscode/
+.idea/
+
+# ================================
+# OS
+# ================================
+.DS_Store
+Thumbs.db
+
+# ================================
+# Temporary Files
+# ================================
+*.tmp
+*.temp
+*.bak
+*.swp

@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_weather
+
+    columns:
+
+      - name: station_id
+        data_tests:
+          - not_null
+
+      - name: weather_date
+        data_tests:
+          - not_null
+          - unique
+
+      - name: max_temperature_c
+        data_tests:
+          - not_null
+
+      - name: min_temperature_c
+        data_tests:
+          - not_null
+
+      - name: precipitation_mm
+        data_tests:
+          - not_null
+
+      - name: snowfall_mm
+        data_tests:
+          - not_null

@@ -1,0 +1,168 @@
+version: 2
+
+models:
+
+  # =========================
+  # YELLOW TAXI MARTS
+  # =========================
+
+  - name: mart_yellow_daily_trips
+    columns:
+      - name: date_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_yellow_zone_performance
+    columns:
+      - name: location_key
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_yellow_route_performance
+    columns:
+      - name: pickup_location_key
+        data_tests:
+          - not_null
+
+      - name: dropoff_location_key
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_yellow_payment_analysis
+    columns:
+      - name: payment_key
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_yellow_vendor_performance
+    columns:
+      - name: vendor_id
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+
+  # =========================
+  # GREEN TAXI MARTS
+  # =========================
+
+  - name: mart_green_daily_trips
+    columns:
+      - name: date_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_green_zone_performance
+    columns:
+      - name: location_key
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_green_route_performance
+    columns:
+      - name: pickup_location_key
+        data_tests:
+          - not_null
+
+      - name: dropoff_location_key
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_green_payment_analysis
+    columns:
+      - name: payment_key
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+  - name: mart_green_vendor_performance
+    columns:
+      - name: vendor_id
+        data_tests:
+          - not_null
+
+      - name: total_trips
+        data_tests:
+          - not_null
+
+    # =========================
+    # COMBINED MOBILITY + WEATHER MART
+    # =========================
+
+  - name: mart_daily_mobility_weather
+    columns:
+
+      - name: date_key
+        data_tests:
+          - not_null
+          - unique
+      - name: full_date
+        data_tests:
+          - not_null
+          - unique
+      - name: yellow_trips
+        data_tests:
+          - not_null
+      - name: green_trips
+        data_tests:
+          - not_null
+      - name: total_trips
+        data_tests:
+          - not_null
+      - name: yellow_revenue
+        data_tests:
+          - not_null
+      - name: green_revenue
+        data_tests:
+          - not_null
+      - name: total_revenue
+        data_tests:
+          - not_null
+      - name: max_temperature_c
+        data_tests:
+          - not_null
+      - name: min_temperature_c
+        data_tests:
+          - not_null
+      - name: precipitation_mm
+        data_tests:
+          - not_null
+      - name: snowfall_mm
+        data_tests:
+          - not_null

@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: fact_green_taxi_trips
+
+    columns:
+      - name: trip_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: date_key
+        data_tests:
+          - not_null
+
+      - name: pickup_location_key
+        data_tests:
+          - not_null
+
+      - name: dropoff_location_key
+        data_tests:
+          - not_null
+
+      - name: payment_key
+        data_tests:
+          - not_null
+
+      - name: rate_code_key
+        data_tests:
+          - not_null
+
+      - name: trip_type_key
+        data_tests:
+          - not_null
+
+      - name: pickup_datetime
+        data_tests:
+          - not_null
+
+      - name: dropoff_datetime
+        data_tests:
+          - not_null
+
+      - name: trip_distance
+        data_tests:
+          - not_null
+
+      - name: fare_amount
+        data_tests:
+          - not_null
+
+      - name: total_amount
+        data_tests:
+          - not_null

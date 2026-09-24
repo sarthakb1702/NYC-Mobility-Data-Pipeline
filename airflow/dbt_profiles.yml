@@ -1,0 +1,17 @@
+nyc_mobility:
+
+  outputs:
+
+    dev:
+
+      type: snowflake
+      account: NEQBIAY-IF63337
+      user: sarthakb1702
+      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
+      role: SYSADMIN
+      database: NYC_MOBILITY
+      warehouse: NYC_MOBILITY_WH
+      schema: STAGING
+      threads: 4
+
+  target: dev

@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: mart_weather_daily
+
+    columns:
+
+      - name: date_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: station_id
+        data_tests:
+          - not_null
+
+      - name: max_temperature_c
+        data_tests:
+          - not_null
+
+      - name: min_temperature_c
+        data_tests:
+          - not_null
+
+      - name: precipitation_mm
+        data_tests:
+          - not_null
+
+      - name: snowfall_mm
+        data_tests:
+          - not_null
+          

@@ -1,0 +1,11 @@
+project:
+  name: "NYC Mobility Data Engineering & Analytics Platform"
+  data_source: "NYC TLC"
+  current_service: "yellow_taxi"
+
+data:
+  raw_path: "data/yellow_trip"
+
+years:
+  start: 2024
+  end: 2026

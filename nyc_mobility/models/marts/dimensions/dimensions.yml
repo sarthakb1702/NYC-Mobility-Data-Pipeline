@@ -1,0 +1,41 @@
+version: 2
+
+models:
+
+  - name: dim_date
+    columns:
+      - name: date_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: full_date
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_location
+    columns:
+      - name: location_key
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_payment
+    columns:
+      - name: payment_key
+        data_tests:
+          - not_null
+
+  - name: dim_rate_code
+    columns:
+      - name: rate_code_key
+        data_tests:
+          - not_null
+
+  - name: dim_trip_type
+    columns:
+      - name: trip_type_key
+        data_tests:
+          - not_null
+          - unique
