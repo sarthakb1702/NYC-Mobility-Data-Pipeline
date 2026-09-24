@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from airflow.sdk import DAG
-from airflow.providers.standard.operators.bash import BashOperator
-from airflow.providers.snowflake.operators.snowflake import SQLExecuteQueryOperator
+from airflow.sdk import DAG # type: ignore
+from airflow.providers.standard.operators.bash import BashOperator # type: ignore
+from airflow.providers.snowflake.operators.snowflake import SQLExecuteQueryOperator # type: ignore
 
 
 with DAG(
