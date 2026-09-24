@@ -286,7 +286,7 @@ Predicted Trip Duration
 
  # 🔄 Apache Airflow Orchestration
 
- Apache Airflow is used to orchestrate the end-to-end data pipeline.
+ Apache Airflow is used to orchestrate the core ELT data pipeline from raw data loading through dbt transformations and data quality validation.
 
  The workflow manages tasks such as:
 
@@ -295,19 +295,13 @@ Data Ingestion
       ↓
 S3 Upload
       ↓
-Snowflake Load
+Snowflake RAW Load
       ↓
 dbt Staging
       ↓
 dbt Marts
       ↓
 Data Quality Tests
-      ↓
-ML Pipeline
-      ↓
-Predictions
-      ↓
-Snowflake
 ```
 
  Airflow provides:
@@ -320,6 +314,24 @@ Snowflake
 
 ---
 
+# Machine Learning Pipeline
+
+The machine learning pipeline uses curated data from Snowflake MARTS to train XGBoost models for zone-level taxi demand forecasting and trip duration prediction. Generated predictions are stored back in Snowflake and used for analysis in Power BI.
+
+Workflow:
+```
+Snowflake MARTS
+      ↓
+ML Feature Engineering
+      ↓
+XGBoost Models
+      ↓
+Predictions
+      ↓
+Snowflake ML Tables
+      ↓
+Power BI ML Dashboard
+```
  # ☁️ Cloud Architecture
 
  The project uses **Amazon S3** and **Snowflake** as the primary cloud data infrastructure.
@@ -380,7 +392,7 @@ Snowflake
 │
 ├── scripts/
 │
-├── sql/
+├── snowflake/
 │
 ├── models/
 │
