@@ -1,7 +1,3 @@
-Yes — you want the **entire README as one single copy-paste block**, with no separate sections outside it. Here it is:
-
- README.md
-
 # 🚕 NYC Mobility Data Engineering & Analytics Platform
 
  An end-to-end **Data Engineering, Machine Learning, and Analytics project** built using NYC taxi trip and weather data.
